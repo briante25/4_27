@@ -31,6 +31,9 @@
         table,
         td {
             border: 1px solid black;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
         }
 
         input[type=button] {
@@ -48,120 +51,37 @@
             width: 100%;
             text-align: center;
             margin: 0 auto;
-            justify-content:center
-
+            justify-content: center
         }
 
         .d-flex {
-            justify-content:center
+            justify-content: center
         }
-        ul{
+
+        ul {
             text-align: center;
         }
 
+        button {
+            background-color: rgba(169, 231, 150, 0.308);
+            color: black;
+            border: 2px solid #0000007c;
+            border-radius: 12px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
-
 </head>
 <script src="jquery-3.6.0.min.js"></script>
 <script>
-    function Dctable(x) {
-        var html = ''
-        document.getElementById("tb").innerHTML = html;
-
-        if (x == "最新公告") {
-            $("#tb").append($("<table style='width:100%'>")); //Table開頭//
-            $("#tb").append($("<thead><tr colspan='3'>"));
-            var td = $("<label id='ccc'></label></tr>")
-            $("#tb").append(td);
-            document.getElementById('ccc').textContent = '最新公告'
-            $("#tb").append($("</thead>"));
-            $("#tb").append($("<tbody>"));
-            var tr = $("<tr>")
-            $("#tb").append(tr);
-            var td = $("<td colspan='3'><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-49-30/item/1308-2022-04-26-02-24-58'>【資管系 公告】【預聘招募會】- 緯創資通/力麗企業</a><br>寫於 週二, 26 四月 2022 10:24</td>")
-            $("#tb").append(td);
-            var tr = $("</tr>")
-
-            $("#tb").append(tr);
-            var tr = $("<tr>")
-            $("#tb").append(tr);
-            var tr = $("<td colspan='3'><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-49-58/item/1307-2022-04-26-02-24-41'>【資管系 公告】中部創新自造教育基地~認識創業講座，帶你認識不同的創業議題~歡迎踴躍參加</a><br>寫於 週二, 26 四月 2022 10:24</td>")
-            $("#tb").append(tr);
-            $("#tb").append($("</tr>"));
-
-            $("#tb").append(tr);
-            var tr = $("<tr>")
-            $("#tb").append(tr);
-            var tr = $("<td colspan='3'><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-48-06/item/1306-111'>【【資管系 公告】【展翅飛翔】111年圓夢計畫徵件公告</a><br>寫於 週二, 26 四月 2022 10:20</td>")
-            $("#tb").append(tr);
-            $("#tb").append($("</tr>"));
-            $("#tb").append($("</tbody>"));
-            var table = $("</table>")
-            $("#tb").append(table)
-        } else if (x == "榮譽榜"){
-            $("#tb").append($("<table style='width:100%'>")); //Table開頭//
-            $("#tb").append($("<thead><tr colspan='3'>"));
-            var td = $("<label id='ccc'></label></tr>")
-            $("#tb").append(td);
-            document.getElementById('ccc').textContent = '榮譽榜'
-            $("#tb").append($("</thead>"));
-            $("#tb").append($("<tbody>"));
-            var tr = $("<tr>")
-            $("#tb").append(tr);
-            var td = $("<td colspan='3'><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-48-24/item/1237-109-109'>【資管系 公告】本系藍友峰老師109年度榮獲教育部109年度大專校院教學實踐研究績優計畫</a><br>寫於 週一, 14 二月 2022 09:03</td>")
-            $("#tb").append(td);
-            var tr = $("</tr>")
-
-            $("#tb").append(tr);
-            var tr = $("<tr>")
-            $("#tb").append(tr);
-            var tr = $("<td colspan='3'><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-48-24/item/1231-2022-01-13-04-40-20'>【資管系 公告】恭賀！本系吳純慧教授榮任管理學院第七任院長</a><br>寫於 週四, 13 一月 2022 12:39</td>")
-            $("#tb").append(tr);
-            $("#tb").append($("</tr>"));
-
-            $("#tb").append(tr);
-            var tr = $("<tr>")
-            $("#tb").append(tr);
-            var tr = $("<td colspan='3'><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-48-24/item/1204-2020'>【資管系 公告】恭喜本系同學榮獲2021年校慶全國大專暨高中學生專題競賽多項獎項</a><br>寫於 週一, 29 十一月 2021 18:05</td>")
-            $("#tb").append(tr);
-            $("#tb").append($("</tr>"));
-            $("#tb").append($("</tbody>"));
-            var table = $("</table>")
-            $("#tb").append(table);
-        }else{$("#tb").append($("<table style='width:100%'>")); //Table開頭//
-            $("#tb").append($("<thead><tr colspan='3'>"));
-            var td = $("<label id='ccc'></label></tr>")
-            $("#tb").append(td);
-            document.getElementById('ccc').textContent = '招生公告'
-            $("#tb").append($("</thead>"));
-            $("#tb").append($("<tbody>"));
-            var tr = $("<tr>")
-            $("#tb").append(tr);
-            var td = $("<td colspan='3'><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-30-24/item/1286-aws-4-21'>【資管系 公告】亞馬遜AWS校園徵才資訊及4.21線上活動邀請</a><br>寫於 週五, 08 四月 2022 14:17</td>")
-            $("#tb").append(td);
-            var tr = $("</tr>")
-
-            $("#tb").append(tr);
-            var tr = $("<tr>")
-            $("#tb").append(tr);
-            var tr = $("<td colspan='3'><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-30-24/item/1285-2022'>【資管系 公告】意藍資訊   2022年度徵才計畫， 智能數據職涯，邀您一同加入！！！！！！！！！</a><br>寫於 週五, 08 四月 2022 14:15</td>")
-            $("#tb").append(tr);
-            $("#tb").append($("</tr>"));
-
-            $("#tb").append(tr);
-            var tr = $("<tr>")
-            $("#tb").append(tr);
-            var tr = $("<td colspan='3'><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-30-24/item/1284-2022'>【資管系 公告】2022年度陽明海運招募訊息</a><br>寫於 週五, 08 四月 2022 14:14</td>")
-            $("#tb").append(tr);
-            $("#tb").append($("</tr>"));
-            $("#tb").append($("</tbody>"));
-            var table = $("</table>")
-            $("#tb").append(table);
-        }
-
-        }
+    function toggleElements(showElement, hideElements) {
+        document.querySelectorAll(hideElements).forEach(el => el.style.display = "none");
+        document.querySelector(showElement).style.display = "block";
+    }
+    function change(x) {
+        document.getElementById('ccc').textContent = x
+    }
 </script>
-
 <body>
 
     <!-- Bootstrap JavaScript Libraries -->
@@ -184,7 +104,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">首頁</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="product.html">商品介紹</a>
@@ -242,7 +162,6 @@
                     </div>
                 </form>
                 <div class="modal-footer">
-
                 </div>
             </div>
         </div>
@@ -296,7 +215,7 @@
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <h3 class="mt-4" style="text-align: center;">資訊捷徑-Information</h3>
+            <h3 class="mt-4" style="text-align: center;"><b>資訊捷徑</b></h3>
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
                     <a class="nav-link" href="http://nfuim.nfu.edu.tw/zh/2015-07-16-06-36-09">本位課程</a>
@@ -322,16 +241,68 @@
                 </li>
             </ul>
         </div>
-        <div class="col-sm-6" style="border-width:2px;border-style:groove;padding:5px;">
+        <div style="border-width:2px;border-style:groove;padding:5px; width:50%;">
             <div class="d-flex" style="border-width:3px;border-style:groove;border-color:#000000e0;padding:8px">
-                <input type="button" value="最新公告" onclick="Dctable('最新公告')">
-                <input type="button" value="榮譽榜" onclick="Dctable('榮譽榜')">
-                <input type="button" value="招生公告" onclick="Dctable('招生公告')">
+                <button onclick="toggleElements('.table1', '.table');change('最新公告')"><b>最新公告</b></button>
+                <button onclick="toggleElements('.table2', '.table');change('榮譽榜')"><b>榮譽榜</b></button>
+                <button onclick="toggleElements('.table3', '.table');change('招生公告')"><b>招生公告</b></button>
             </div>
-            <div id="tb">
+            <div id="ccc" style="text-align:center">最新公告</div>
+            <div id="tb" style="width:100%;text-align:center">
+                <div class="table table1">
+                    <table>
+                        <tr>
+                            <td><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-49-30/item/1308-2022-04-26-02-24-58'>【資管系公告】【預聘招募會】-
+                                    緯創資通/力麗企業</a><br>寫於 週二, 26 四月 2022 10:24</td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-49-58/item/1307-2022-04-26-02-24-41'>【資管系公告】中部創新自造教育基地~認識創業講座，帶你認識不同的創業議題~歡迎踴躍參加</a><br>寫於
+                                週二, 26 四月 2022 10:24</td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-48-06/item/1306-111'>【【資管系公告】【展翅飛翔】111年圓夢計畫徵件公告</a><br>寫於
+                                週二, 26 四月 2022 10:20</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="table table2" style="display: none">
+                    <table>
+                        <tr>
+                            <td><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-48-24/item/1237-109-109'>【資管系
+                                    公告】本系藍友峰老師109年度榮獲教育部109年度大專校院教學實踐研究績優計畫</a><br>寫於 週一, 14 二月 2022 09:03</td>
+                        </tr>
+                        <tr>
+                            <td><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-48-24/item/1231-2022-01-13-04-40-20'>【資管系
+                                    公告】恭賀！本系吳純慧教授榮任管理學院第七任院長</a><br>寫於 週四, 13 一月 2022 12:39</td>
+                        </tr>
+                        <tr>
+                            <td><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-48-24/item/1204-2020'>【資管系
+                                    公告】恭喜本系同學榮獲2021年校慶全國大專暨高中學生專題競賽多項獎項</a><br>寫於 週一, 29 十一月 2021 18:05</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="table table3" style="display: none">
+                    <table>
+                        <tr>
+                            <td><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-30-24/item/1286-aws-4-21'>【資管系
+                                    公告】亞馬遜AWS校園徵才資訊及4.21線上活動邀請</a><br>寫於 週五, 08 四月 2022 14:17</td>
+                        </tr>
+                        <tr>
+                            <td><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-30-24/item/1285-2022'>【資管系 公告】意藍資訊
+                                    2022年度徵才計畫， 智能數據職涯，邀您一同加入！</a><br>寫於 週五, 08 四月 2022 14:15</td>
+                        </tr>
+                        <tr>
+                            <td><a href='http://nfuim.nfu.edu.tw/zh/2015-07-16-06-30-24/item/1284-2022'>【資管系
+                                    公告】2022年度陽明海運招募訊息</a><br>寫於 週五, 08 四月 2022 14:14</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
-
     </div>
     </div>
     <div class="footer">
